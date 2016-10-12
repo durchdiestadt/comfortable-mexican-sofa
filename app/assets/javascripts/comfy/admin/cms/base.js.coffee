@@ -92,7 +92,10 @@ window.CMS.wysiwyg = ->
     plugins:          ['imagemanager', 'filemanager', 'table', 'video', 'definedlinks']
     lang:             CMS.locale
     convertDivs:      false
-
+    initCallback:     ->
+      if typeof window.ddsRedactorInitCallback isnt "undefined"
+        ddsRedactorInitCallback()
+ 
 
 window.CMS.codemirror = ->
   $('textarea[data-cms-cm-mode]').each (i, element) ->
