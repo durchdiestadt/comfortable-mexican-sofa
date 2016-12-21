@@ -107,7 +107,9 @@ class ComfortableMexicanSofa::Configuration
       'pl'    => 'Polski',
       'pt-BR' => 'Português Brasileiro',
       'ru'    => 'Русский',
+      'sk'    => 'Slovensky',
       'sv'    => 'Svenska',
+      'tr'    => 'Türkçe',
       'uk'    => 'Українська',
       'zh-CN' => '简体中文',
       'zh-TW' => '正體中文'

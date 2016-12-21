@@ -518,4 +518,5 @@ class Comfy::Admin::Cms::PagesControllerTest < ActionController::TestCase
     assert_equal 1, page_one.position
     assert_equal 0, page_two.position
   end
+  
 end
