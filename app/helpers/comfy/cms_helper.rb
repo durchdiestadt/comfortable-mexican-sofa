@@ -81,5 +81,9 @@ module Comfy
         paginate collection, :theme => 'comfy'
       end
     end
+
+    def comfy_freiheit15_user_can_edit
+      (respond_to?(:user_is_allowed_to_edit) and user_is_allowed_to_edit) or !respond_to?(:user_is_allowed_to_edit)
+    end
   end
 end

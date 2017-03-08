@@ -1,5 +1,6 @@
 .page-header
-  = link_to t('.new_link'), new_comfy_admin_cms_site_page_path(@site), :class => 'btn btn-default pull-right'
+  - if comfy_freiheit15_user_can_edit
+    = link_to t('.new_link'), new_comfy_admin_cms_site_page_path(@site), :class => 'btn btn-default pull-right'
   %h2= t('.title')
 
 - content_for :right_column do
@@ -7,7 +8,8 @@
 
 = render 'comfy/admin/cms/partials/pages_before'
 
-= render :partial => 'comfy/admin/cms/categories/index', :object => 'Comfy::Cms::Page'
+- if comfy_freiheit15_user_can_edit
+  = render :partial => 'comfy/admin/cms/categories/index', :object => 'Comfy::Cms::Page'
 
 %ul.list.sortable
   = render :partial => 'index_branch', :collection => @pages
